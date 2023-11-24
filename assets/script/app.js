@@ -31,7 +31,7 @@ function addContact(){
     } else {
         if(contacts.length < 8){
             dvTips.innerHTML = '';
-            const contact = new Contact(iptInfo.value);
+            const contact = new Contact(details[0], details[1], details[2],);
             const dvContact = create('div');
             dvContact.classList.add('contact');
             dvContact.innerHTML = `Name: ${contact.name} <br>City: ${contact.city} <br>Email: ${contact.email}`;
