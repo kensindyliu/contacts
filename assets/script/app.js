@@ -1,6 +1,8 @@
 
-'user strict'
 
+import { Contact } from './Contact.js';
+
+'user strict'
 function onEvent(event, selector, callback){
     return selector.addEventListener(event, callback);
 }
@@ -45,29 +47,3 @@ function addContact(){
     }
 }
 
-
-class Contact {
-    constructor(contactInfo){
-        let details = contactInfo.split(',');
-        console.log(details.length);
-        if(details.length >= 3){
-            this._name = details[0];
-            this._city = details[1];
-            this._email = details[2];
-        } else {
-            return null;
-        }
-    }
-
-    get name(){
-        return this._name;
-    }
-
-    get city(){
-        return this._city;
-    }
-
-    get email(){
-        return this._email;
-    }
-}
