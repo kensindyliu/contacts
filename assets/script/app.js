@@ -25,7 +25,7 @@ iptInfo.value = '';
 dvTips.innerHTML = 'Double click to delete a saved contact.';
 onEvent('click', btnAdd, addContact)
 let idIndex = 0;
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function addContact(){
     let details = iptInfo.value.split(',');
