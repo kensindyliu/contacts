@@ -2,11 +2,12 @@ export class Contact {
     #name;
     #city;
     #email;
+    #id;
   
     constructor(name, city, email) {
-      this.#name = name;
-      this.#city = city;
-      this.#email = email;
+      this.#name = name.trim();
+      this.#city = city.trim();
+      this.#email = email.trim();
     }
   
     get name() {
@@ -19,6 +20,14 @@ export class Contact {
   
     get email() {
       return this.#email;
+    }
+
+    get ID() {
+      return this.#id;
+    }
+
+    set ID(value) {
+      this.#id = value;
     }
   }
   
