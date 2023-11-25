@@ -33,7 +33,7 @@ function addContact(){
         dvTips.innerHTML = 'Please input the name, the city, the email and then add contact';
     } else {
         if(!emailPattern.test(details[2].trim())){
-            dvTips.innerHTML = 'Please input a valid email and then add contact';
+            dvTips.innerHTML = 'Email is not valid.';
             return;
         }
         if(contacts.length < 8){
